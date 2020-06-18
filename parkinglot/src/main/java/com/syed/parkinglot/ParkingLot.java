@@ -75,7 +75,6 @@ public class ParkingLot {
             System.out.println("Sorry, parking lot is not created");
             System.out.println();
         } else if (this.map1.size() > 0) {
-            // Print the current status.
             System.out.println("Slot No.\tRegistration No.\tColor");
             Car car;
             if (this.map1.containsKey(regNo)) {
