@@ -28,8 +28,9 @@ public class InputParserTest {
     public void parseTextInput() throws Exception {
         inputParser.parseTextInput("hello");
         assertEquals("Invalidinput", outContent.toString().trim().replace(" ", ""));
-        inputParser.parseTextInput("status");
-        assertEquals("Invalidinput\nSorry,parkinglotisnotcreated", outContent.toString().trim().replace(" ", ""));
+        inputParser.parseTextInput("seek");
+        String actualString = outContent.toString().trim();
+        assertTrue(actualString.contains("Sorry, parking lot is not created"));
     }
 
 }

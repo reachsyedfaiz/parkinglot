@@ -48,6 +48,9 @@ public class ParkingLotTest {
         parkingLot.createParkingLot("6");
         parkingLot.park("KA-01-HH-1234", "White");
         parkingLot.seek();
+        String actualString = outContent.toString().trim().replace(" ", "");
+        assertTrue(actualString.contains("1	KA-01-HH-1234	White"));
+        
        
     }
 }
