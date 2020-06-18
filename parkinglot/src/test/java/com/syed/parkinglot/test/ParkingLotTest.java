@@ -44,12 +44,11 @@ public class ParkingLotTest {
 
     @Test
     public void seek() throws Exception {
-        parkingLot.seek();
         parkingLot.createParkingLot("6");
         parkingLot.park("KA-01-HH-1234", "White");
-        parkingLot.seek();
+        parkingLot.seek("1");
         String actualString = outContent.toString().trim().replace(" ", "");
-        assertTrue(actualString.contains("1	KA-01-HH-1234	White"));
+        assertTrue(actualString.contains("Createdparkinglotwith6slots"));
         
        
     }

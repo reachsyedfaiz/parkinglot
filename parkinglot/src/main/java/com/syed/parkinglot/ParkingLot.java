@@ -70,7 +70,7 @@ public class ParkingLot {
         }
     }
     
-    public void seek() {
+    public void seek(String regNo) {
         if (this.MAX_SIZE == 0) {
             System.out.println("Sorry, parking lot is not created");
             System.out.println();
@@ -78,12 +78,9 @@ public class ParkingLot {
             // Print the current status.
             System.out.println("Slot No.\tRegistration No.\tColor");
             Car car;
-            for (int i = 1; i <= this.MAX_SIZE; i++) {
-                String key = Integer.toString(i);
-                if (this.map1.containsKey(key)) {
-                    car = this.map1.get(key);
-                    System.out.println(i + "\t" + car.regNo + "\t" + car.color);
-                }
+            if (this.map1.containsKey(regNo)) {
+                car = this.map1.get(regNo);
+                System.out.println(car.regNo + "\t" + car.color);
             }
             System.out.println();
         } else {
